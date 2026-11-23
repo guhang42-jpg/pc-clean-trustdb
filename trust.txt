@@ -1,0 +1,76 @@
+# ============================================================
+#  电脑清理小工具 · 识别库（白名单库）文件
+#  这是"在线库"的格式样例，可以直接改内容用
+# ------------------------------------------------------------
+#  用法一（本地随包更新，不联网）
+#    本文件改名叫  trust.txt，放到 电脑清理小工具.exe 同一个文件夹里，
+#    打开软件 → 关于/联系 → 点「更新识别库」，立刻生效。
+#    发给别人的时候顺手带上，别人装完也带着你这份库。
+#
+#  用法二（真正的在线更新）
+#    把这个文件传到任一支持"直链访问"的地方（GitHub Gist 的 raw 链接、
+#    阿里云 OSS、腾讯 COS、蓝奏云直链、自己的小服务器都行），
+#    然后把地址填进 profile.txt：
+#        trustUrl=https://你的地址/trust.txt
+#    软件停用 7 天以上会自动在后台拉一次，也可以在「更新识别库」手动拉。
+# ------------------------------------------------------------
+#  格式：一行一条，三类写法都认
+#    keep|关键词|说明      命中就是"别关"（系统组件、驱动、安全软件）
+#    bloat|关键词|说明     命中就是"建议关闭"（推广、捆绑、弹窗推手）
+#    关键词|说明           不带前缀的，默认当 keep
+#  第一行的 ver= 会显示在软件界面上，改内容时顺手把日期改掉
+# ============================================================
+# ver=20261124
+
+# ---------- 下面这部分 = 别关（keep） ----------
+keep|steam|Steam 平台，玩游戏要用
+keep|epicgames|Epic 启动器
+keep|obs|录屏与直播用
+keep|logi|罗技外设驱动
+keep|razer|雷蛇外设驱动
+keep|wacom|数位板驱动
+keep|onedrive|OneDrive 网盘同步
+keep|dropbox|Dropbox 同步
+keep|坚果云|坚果云同步
+keep|synology|群晖/威联通客户端
+keep|teamviewer|远程协助，家里老人要用
+keep|sunlogin|向日葵远程
+keep|todesk|ToDesk 远程
+keep|anydesk|AnyDesk 远程
+keep|printer|打印机驱动
+keep|canon|佳能打印机
+keep|epson|爱普生打印机
+keep|hp|惠普打印机
+keep|lenovo|联想电池/热键
+keep|dell|戴尔电源管理
+keep|realtek|声卡
+keep|aliworkbench|阿里旺旺（做电商要用）
+keep|dingtalk|钉钉打卡
+keep|lark|飞书
+keep|wecom|企业微信
+keep|qq|QQ 本体
+keep|wechat|微信
+keep|weixin|微信（新版）
+
+# ---------- 下面这部分 = 建议关闭（bloat） ----------
+# 注意：这里只写"具体到某个程序"的词，别写 update 这种大词，会把正常更新器全打上
+bloat|kugou|酷狗音乐常驻
+bloat|kuwo|酷我音乐常驻
+bloat|iqiyi|爱奇艺常驻
+bloat|youku|优酷常驻
+bloat|migu|咪咕视频常驻
+bloat|taobao|淘宝桌面版常驻（网页够用）
+bloat|jd|京东桌面版常驻
+bloat|pdd|拼多多桌面版常驻
+bloat|douyin|抖音桌面版常驻
+bloat|kuaishou|快手桌面版常驻
+bloat|2345|2345 全家桶
+bloat|liebao|猎豹浏览器推广
+bloat|ucbrowser|UC 浏览器推广
+bloat|hao123|主页锁定推广
+bloat|duba|毒霸/金山推广
+bloat|wpsupdate|WPS 后台更新器
+bloat|baidunetdisk|百度网盘常驻（不备份就关）
+bloat|alitools|阿里旺旺推广组件
+bloat|1518|各种小游戏盒子
+bloat|gamebox|游戏盒子推广
